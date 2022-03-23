@@ -23,7 +23,7 @@ if (intpingamount > ratelimit) { // checking is user is trying to send more mess
     console.log("Thats too many pings. You will get rate-limited, please try below the limit of " + ratelimit + ".") // Let user know about their input being too high
 }else{
     console.log(`I am sending ${pingamount}` + ` message(s).`); // inform user of what program is doing.
-    for (let i = 0; intpingamount !== 0; intpingamount--) { // loop for specific amount of user specifed time
+    for (; intpingamount !== 0; intpingamount--) { // loop for specific amount of user specifed time
         webhook.send(messagetosend) //Send ping message
         
     }
